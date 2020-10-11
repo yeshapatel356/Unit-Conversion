@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 const measurement = {
   m: "Meter",
-  km: "KiloMeter"
+  km: "KiloMeter",
 };
 
 function toKilometer(meter) {
@@ -59,20 +59,20 @@ class UnitCalculator extends React.Component {
     this.handleKilometerChange = this.handleKilometerChange.bind(this);
     this.state = {
       scale: "m",
-      unit: ""
+      unit: "",
     };
   }
   handleMeterChange(unit) {
     this.setState({
       scale: "m",
-      unit
+      unit,
     });
   }
 
   handleKilometerChange(unit) {
     this.setState({
       scale: "km",
-      unit
+      unit,
     });
   }
 
@@ -96,7 +96,7 @@ class UnitCalculator extends React.Component {
           unit={kilometer}
           onUnitChange={this.handleKilometerChange}
         />
-        <h3>Confused whether to walk or take Cab?</h3>
+        <h4>Confused whether to walk or take Cab?</h4>
         <WalkingDistance meter={parseFloat(meter)} />
       </div>
     );
